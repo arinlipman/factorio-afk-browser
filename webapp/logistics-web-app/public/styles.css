@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+}
+
+h1 {
+    text-align: center;
+    color: #ffa500;
+    margin-top: 20px;
+}
+
+.tabs {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab {
+    padding: 10px;
+    border: 1px solid #444;
+    cursor: pointer;
+    background-color: #333;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+    color: #ffa500;
+}
+
+.tab:hover {
+    background-color: #444;
+}
+
+.tab.active {
+    background-color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+.tab-content {
+    border: 1px solid #444;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #333;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.accordion {
+    border: 1px solid #444;
+    margin-bottom: 10px;
+    background-color: #333;
+}
+
+.accordion-header {
+    background-color: #444;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffa500;
+}
+
+.accordion-content {
+    padding: 10px;
+    border-top: 1px solid #444;
+    background-color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #444;
+    cursor: pointer;
+    color: #e0e0e0;
+}
+
+th {
+    background-color: #444;
+}
+
+tr:nth-child(even) {
+    background-color: #3a3a3a;
+}
+
+input[type="text"] {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #444;
+    border: 1px solid #555;
+    color: #e0e0e0;
+}

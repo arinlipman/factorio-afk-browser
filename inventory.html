@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Logistic Network Inventory</title>
+</head>
+<body>
+  <h1>Logistic Network Inventory</h1>
+  <div id="inventory"></div>
+
+  <script>
+    function updateInventory() {
+      fetch('/inventory')  // Make a request to the server
+        .then(response => response.json())
+        .then(data => {
+          const inventoryDiv = document.getElementById('inventory');
+          inventoryDiv.innerHTML = ""; // Clear existing data
+
+          for (const networkId in data) {
+              const networkData = data[networkId];
+              const networkDiv = document.createElement('div');
+              networkDiv.innerHTML = `<h2>Network ${networkId}</h2>`;
+              for (const itemName in networkData) {
+                  const itemCount = networkData[itemName];
+                  const itemDiv = document.createElement('p');
+                  itemDiv.textContent = `${itemName}: ${itemCount}`;
+                  networkDiv.appendChild(itemDiv);
+              }
+              inventoryDiv.appendChild(networkDiv);
+          }
+        });
+    }
+
+    setInterval(updateInventory, 5000); // Update every 5 seconds
+    updateInventory(); // Initial update
+  </script>
+</body>
+</html>

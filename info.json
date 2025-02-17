@@ -1,0 +1,9 @@
+{
+  "name": "webserver",
+  "version": "0.1.0",
+  "title": "Logistic Network Inventory",
+  "author": "Your Name",
+  "description": "Displays logistic network inventory in a web browser.",
+  "factorio_version": "2.0",
+  "dependencies": ["base >= 2.0"]
+}
